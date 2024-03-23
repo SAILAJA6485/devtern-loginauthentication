@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LOGIN AUTHENTICATION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="loginauth.css"> 
+</head>
+<body class="image">
+    <div >
+        <div class="sparkle-box">
+            <h3 style="text-align:center;">LOGIN AUTHENTICATION</h3>
+            <h5 style="text-align:center;">A Web Development task by Devtern</h5>
+            <div class="inputclass">
+              <label><i class="fas fa-user"></i> Username</label><br>   
+              <input id="1" type="textbox" placeholder=" Enter Username" style="background: transparent;border:none;" > </div>
+             
+              <div class="inputclass">
+              <label>🔒 Password</label><br>
+              <input id="2" type="password" placeholder="enter password" style="background: transparent;border:none;">
+              <br>
+            </div>
+              <div style="display:flex ;column-gap:45px;">
+                 <div  style="display:flex ;"><input type="checkbox"><h5>Remember me</h5></div>
+               <a href="forgetpassword.html" onclick="openForgotPasswordModal()">Forget Password?</a>
+              </div><br>
+              <button onclick="authenticate()"  type="submit" Style="border-radius:5px ;width: 280px;height:30px;position:right;background-color: rgb(40, 98, 79);">Login</button><br>
+              <label> Don't have an account?<a href=#>Register</a></label>
+            </div>
+             
+          </div>
+    </div>
+    <script>
+      function authenticate() {
+    var username = document.getElementById("1").value;
+    var password = document.getElementById("2").value;
+    var correctUsername = "sailaja";
+    var correctPassword = "12345";
+    if (username === '' || password === '') {
+        alert('Please enter both username and password');
+        return; 
+      }
+    if (username === correctUsername && password === correctPassword) {
+        window.location.href = "nextpage.html";
+    } else {
+        alert("Invalid username or password");
+    }
+}
+    </script>
+</body>
+</html>
